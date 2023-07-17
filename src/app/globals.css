@@ -1,18 +1,36 @@
-.sliderContainer{
-  background-color: rgb(209, 209, 209);
-  width: 65px;
-  border-radius: 1em;
-  height: 30px;
-  display: flex;
-  padding: 3px;
-  cursor: pointer;
+/* Keyframes */
+.activateSlider{
+  animation: appears 1s both;
+}
+.appears{
+  animation: appears 1s both;
+}
+.dissapear{
+  animation: dissapear 1s both;
+}
+.sliderAnimationOn{
+  animation: sliderOn 1s both;
+}
+.sliderContainerOn{
+animation: sliderContainerOn 1s both;
+}
+.sliderContainerOff{
+  animation: sliderContainerOff 1s both;
+}
+.sliderAnimationOff{
+  animation: sliderOff 1s both;
+}
+@keyframes appears {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+@keyframes dissapear {
+  0%{opacity: 1;}
+  100%{opacity: 0;}
 }
 @keyframes sliderOn {
   0%{}
   100%{transform: translateX(40px) translateY(2.3px); background-color: rgb(255, 255, 255);}
-}
-.sliderAnimationOn{
-  animation: sliderOn 1s both;
 }
 @keyframes sliderOff {
   0%{transform: translateX(40px) translateY(2.3px); background-color: rgb(255, 255, 255);}
@@ -22,19 +40,23 @@
   0%{background-color: rgb(209, 209, 209);}
   100%{background-color: #48d265;}
 }
-.sliderContainerOn{
-animation: sliderContainerOn 1s both;
-}
 @keyframes sliderContainerOff {
   0%{background-color: #48d265;}
   100%{ background-color: rgb(209, 209, 209);}
 }
-.sliderContainerOff{
-  animation: sliderContainerOff 1s both;
+
+/* Keyframes */
+
+.sliderContainer{
+  background-color: rgb(209, 209, 209);
+  width: 65px;
+  border-radius: 1em;
+  height: 30px;
+  display: flex;
+  padding: 3px;
+  cursor: pointer;
 }
-.sliderAnimationOff{
-  animation: sliderOff 1s both;
-}
+
 .sliderSlide{
   transform: translateY(2.3px);
 height: 25px;
@@ -55,20 +77,7 @@ border-radius: 50%;
   text-align: center;
   opacity: 0;
 }
-.appears{
-  animation: appears 1s both;
-}
-@keyframes appears {
-  0%{}
-  100%{opacity: 1;}
-}
-@keyframes dissapear {
-  0%{opacity: 1;}
-  100%{opacity: 0;}
-}
-.dissapear{
-  animation: dissapear 1s both;
-}
+
 .avatar {
   border-radius: 50%;
   width: 100px;
